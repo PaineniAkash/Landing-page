@@ -1,65 +1,320 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Deals</title>
+    <title>Haven's Kitchen | Fine Dining Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Card 1 -->
-        <div class="card">
-            <h2>Up to 70% off | Top categories from Small Businesses</h2>
-            <div class="card-images">
-                <div class="item">
-                    <img src="https://m.media-amazon.com/images/I/81TO6qUv4zL._SX522_.jpg" alt="Home decor">
-                    <p>Home decorations</p>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>Haven's Kitchen</h1>
                 </div>
-                <div class="item">
-                    <img src="https://m.media-amazon.com/images/I/81AyOlAxwuL._AC_UY327_FMwebp_QL65_.jpg" alt="Women's wear">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reservation">Reservation</a></li>
+                    <li><a href="#location">Location</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Experience Culinary Excellence</h2>
+            <p>Where every bite tells a story</p>
+            <a href="#reservation" class="btn">Book a Table</a>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <p>Our story and philosophy</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to Haven's Kitchen</h3>
+                    <p>Founded in 2010, Haven's Kitchen has been serving authentic cuisine with a modern twist. Our chef brings 20 years of international experience to create dishes that delight both the eyes and the palate.</p>
+                    <p>We source our ingredients locally whenever possible, ensuring freshness and supporting our community. Our mission is to provide an unforgettable dining experience in an elegant yet comfortable atmosphere.</p>
+                    <a href="#menu" class="btn btn-outline">Explore Our Menu</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Restaurant interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <p>Delicious offerings for every taste</p>
+            </div>
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="vegetarian">Vegetarian</button>
+                <button class="filter-btn" data-filter="non-vegetarian">Non-Vegetarian</button>
+                <button class="filter-btn" data-filter="special">Chef's Special</button>
+            </div>
+            <div class="menu-items">
+                
+                <div class="menu-category">
+                    <h3>Appetizers</h3>
+                    <div class="menu-item" data-category="vegetarian">
+                        <div class="item-info">
+                            <h4>Bruschetta</h4>
+                            <p>Toasted bread topped with tomatoes, garlic, and fresh basil</p>
+                        </div>
+                        <span class="item-price">$8.99</span>
+                    </div>
+                    <div class="menu-item" data-category="non-vegetarian">
+                        <div class="item-info">
+                            <h4>Calamari</h4>
+                            <p>Crispy fried squid served with lemon aioli</p>
+                        </div>
+                        <span class="item-price">$12.99</span>
+                    </div>
+                    <div class="menu-item" data-category="vegetarian">
+                        <div class="item-info">
+                            <h4>Caprese Salad</h4>
+                            <p>Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze</p>
+                        </div>
+                        <span class="item-price">$10.99</span>
+                    </div>
+                </div>
+                
+                
+                <div class="menu-category">
+                    <h3>Main Courses</h3>
+                    <div class="menu-item" data-category="non-vegetarian">
+                        <div class="item-info">
+                            <h4>Filet Mignon</h4>
+                            <p>8oz tender beef filet with roasted vegetables and red wine reduction</p>
+                        </div>
+                        <span class="item-price">$32.99</span>
+                    </div>
+                    <div class="menu-item" data-category="special">
+                        <div class="item-info">
+                            <h4>Chef's Signature Pasta</h4>
+                            <p>Handmade pasta with truffle cream sauce and wild mushrooms</p>
+                        </div>
+                        <span class="item-price">$24.99</span>
+                    </div>
+                    <div class="menu-item" data-category="vegetarian">
+                        <div class="item-info">
+                            <h4>Eggplant Parmesan</h4>
+                            <p>Breaded eggplant layered with marinara and mozzarella</p>
+                        </div>
+                        <span class="item-price">$18.99</span>
+                    </div>
+                    <div class="menu-item" data-category="non-vegetarian">
+                        <div class="item-info">
+                            <h4>Grilled Salmon</h4>
+                            <p>Atlantic salmon with lemon butter sauce and asparagus</p>
+                        </div>
+                        <span class="item-price">$26.99</span>
+                    </div>
+                </div>
+                
+                
+                <div class="menu-category">
+                    <h3>Desserts</h3>
+                    <div class="menu-item" data-category="vegetarian">
+                        <div class="item-info">
+                            <h4>Tiramisu</h4>
+                            <p>Classic Italian dessert with espresso-soaked ladyfingers</p>
+                        </div>
+                        <span class="item-price">$9.99</span>
+                    </div>
+                    <div class="menu-item" data-category="special">
+                        <div class="item-info">
+                            <h4>Chocolate Soufflé</h4>
+                            <p>Warm chocolate soufflé with vanilla bean ice cream</p>
+                        </div>
+                        <span class="item-price">$11.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <p>A glimpse of our ambiance and dishes</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Chef preparing food">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Restaurant dining area">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1498&q=80" alt="Steak dish">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Pasta dish">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80" alt="Dessert">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Restaurant bar area">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="reservation" class="section reservation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Make a Reservation</h2>
+                <p>Book your table in advance</p>
+            </div>
+            <form id="reservation-form" class="reservation-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <select id="guests" name="guests" required>
+                        <option value="" disabled selected>Number of Guests</option>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5">5 People</option>
+                        <option value="6">6 People</option>
+                        <option value="7">7+ People</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="special-requests" name="special-requests" placeholder="Special Requests"></textarea>
+                </div>
+                <button type="submit" class="btn">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+    
+    <section id="location" class="section location">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Location</h2>
+                <p>Visit us today</p>
+            </div>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>Address</h3>
+                    <p>VadlaMudi Guntur District</p>
                     
-                    <p>Mobiles</p>
+                    <h3>Hours</h3>
+                    <p>Monday-Sunday: 11am - 10pm</p>
+                   
+                    
+                    <h3>Contact</h3>
+                    <p>Phone: 9030905360<br>
+                    Email:Paineniakash9542.com</p>
                 </div>
-                <div class="item">
-                    <img src="https://m.media-amazon.com/images/I/715kh38+efL._AC_UL480_FMwebp_QL65_.jpg" alt="Cushions & pillows">
-                    <p>Cushions & pillows</p>
-                </div>
-                <div class="item">
-                    <img src="https://m.media-amazon.com/images/I/814O2Jw+q6L._AC_UL480_FMwebp_QL65_.jpg" alt="Beauty products">
-                    <p>Beauty products</p>
-                </div>
-            </div>
-            <a href="#">See all offers</a>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="card">
-            <h2>Minimum 50% off | Amazon Brands & more</h2>
-            <div class="card-images">
-                <div class="item">
-                    <img src="https://m.media-amazon.com/images/I/81ry+Z3KACL._AC_UL480_FMwebp_QL65_.jpg" alt="Cookware & dining">
-                    <p>Cookware & dining</p>
-                </div>
-                <div class="item">
-                    <img src="https://m.media-amazon.com/images/I/41Ro1boFarL.AC_SX250.jpg" alt="Home essentials">
-                    <p>Home essentials</p>
-                </div>
-                <div class="item">
-                    <img src="https://m.media-amazon.com/images/I/41k3DM4BKnL.AC_SX250.jpg" alt="Daily essentials">
-                    <p>Daily essentials</p>
-                </div>
-                <div class="item">
-                    <img src="https://m.media-amazon.com/images/G/31/Symbol/2025/MayART/Blockbuster_deals/AugART/Casual_Denim_Shirt_A10_1._CB804795471_.png" alt="Premium styles">
-                    <p>Premium styles</p>
+                <div class="location-map">
+                   <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3793.214293533101!2d80.5564356!3d16.2317749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a094d0d6063e7%3A0x5f1c65477088fc3c!2sVadlamudi%2C%20Andhra%20Pradesh%20522213!5e0!3m2!1sen!2sin!4v1668500000000!5m2!1sen!2sin" 
+  width="600" 
+  height="450" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
                 </div>
             </div>
-            <a href="">See all deals</a>
         </div>
+    </section>
 
-      
-            <a href="">See all offers</a>
+    
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for special offers and events</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
+
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Haven's Kitchen</h3>
+                    <p>Fine dining with a modern twist. Experience culinary excellence in the heart of the city.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reservation">Reservation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Vignan University, Vadlamudi, Guntur District</p>
+                    <p><i class="fas fa-phone"></i> 9030905360</p>
+                    <p><i class="fas fa-envelope"></i> Paineniakash@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Haven's Kitchen. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
